@@ -1,0 +1,14 @@
+C:\Users\david\Downloads\CSE325\W1 - Assignment\bin\Debug\net9.0\W1 - Assignment.exe
+C:\Users\david\Downloads\CSE325\W1 - Assignment\bin\Debug\net9.0\W1 - Assignment.deps.json
+C:\Users\david\Downloads\CSE325\W1 - Assignment\bin\Debug\net9.0\W1 - Assignment.runtimeconfig.json
+C:\Users\david\Downloads\CSE325\W1 - Assignment\bin\Debug\net9.0\W1 - Assignment.dll
+C:\Users\david\Downloads\CSE325\W1 - Assignment\bin\Debug\net9.0\W1 - Assignment.pdb
+C:\Users\david\Downloads\CSE325\W1 - Assignment\obj\Debug\net9.0\W1 - Assignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david\Downloads\CSE325\W1 - Assignment\obj\Debug\net9.0\W1 - Assignment.AssemblyInfoInputs.cache
+C:\Users\david\Downloads\CSE325\W1 - Assignment\obj\Debug\net9.0\W1 - Assignment.AssemblyInfo.cs
+C:\Users\david\Downloads\CSE325\W1 - Assignment\obj\Debug\net9.0\W1 - Assignment.csproj.CoreCompileInputs.cache
+C:\Users\david\Downloads\CSE325\W1 - Assignment\obj\Debug\net9.0\W1 - Assignment.dll
+C:\Users\david\Downloads\CSE325\W1 - Assignment\obj\Debug\net9.0\refint\W1 - Assignment.dll
+C:\Users\david\Downloads\CSE325\W1 - Assignment\obj\Debug\net9.0\W1 - Assignment.pdb
+C:\Users\david\Downloads\CSE325\W1 - Assignment\obj\Debug\net9.0\W1 - Assignment.genruntimeconfig.cache
+C:\Users\david\Downloads\CSE325\W1 - Assignment\obj\Debug\net9.0\ref\W1 - Assignment.dll

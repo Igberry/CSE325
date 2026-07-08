@@ -66,3 +66,4 @@ C:\Users\david\Downloads\CSE325\bin\Debug\net8.0\lt\Humanizer.resources.dll
 C:\Users\david\Downloads\CSE325\bin\Debug\net8.0\ms\Humanizer.resources.dll
 C:\Users\david\Downloads\CSE325\bin\Debug\net8.0\pt-BR\Humanizer.resources.dll
 C:\Users\david\Downloads\CSE325\bin\Debug\net8.0\th\Humanizer.resources.dll
+C:\Users\david\Downloads\CSE325\obj\Debug\net8.0\CSE325.sourcelink.json

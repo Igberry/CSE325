@@ -1,0 +1,33 @@
+@model MovieApp.Models.Movie
+
+@{
+    ViewData["Title"] = "Movie Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="card">
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Title</dt>
+            <dd class="col-sm-9">@Model.Title</dd>
+
+            <dt class="col-sm-3">Genre</dt>
+            <dd class="col-sm-9">@Model.Genre</dd>
+
+            <dt class="col-sm-3">Release Year</dt>
+            <dd class="col-sm-9">@Model.ReleaseYear</dd>
+
+            <dt class="col-sm-3">Rating</dt>
+            <dd class="col-sm-9">@Model.Rating</dd>
+
+            <dt class="col-sm-3">Director</dt>
+            <dd class="col-sm-9">@Model.Director</dd>
+        </dl>
+    </div>
+</div>
+
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to list</a>
+</p>

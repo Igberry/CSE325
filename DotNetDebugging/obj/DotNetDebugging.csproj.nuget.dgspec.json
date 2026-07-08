@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\david\\Downloads\\CSE325\\DotNetDebugging\\DotNetDebugging.csproj": {}
+    "C:\\Users\\david\\Downloads\\CSE325\\DotNetDebugging\\DotNetDebugging.csproj": {}
   },
   "projects": {
-    "c:\\Users\\david\\Downloads\\CSE325\\DotNetDebugging\\DotNetDebugging.csproj": {
+    "C:\\Users\\david\\Downloads\\CSE325\\DotNetDebugging\\DotNetDebugging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\david\\Downloads\\CSE325\\DotNetDebugging\\DotNetDebugging.csproj",
+        "projectUniqueName": "C:\\Users\\david\\Downloads\\CSE325\\DotNetDebugging\\DotNetDebugging.csproj",
         "projectName": "DotNetDebugging",
-        "projectPath": "c:\\Users\\david\\Downloads\\CSE325\\DotNetDebugging\\DotNetDebugging.csproj",
+        "projectPath": "C:\\Users\\david\\Downloads\\CSE325\\DotNetDebugging\\DotNetDebugging.csproj",
         "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\david\\Downloads\\CSE325\\DotNetDebugging\\obj\\",
+        "outputPath": "C:\\Users\\david\\Downloads\\CSE325\\DotNetDebugging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config"

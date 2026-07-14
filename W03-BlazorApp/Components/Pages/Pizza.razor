@@ -1,0 +1,33 @@
+@page "/pizza"
+@using System.Globalization
+
+<PageTitle>Pizza Specials</PageTitle>
+
+<h1>Fresh Pizza Specials</h1>
+<p>Choose from our favorite handcrafted pizzas and enjoy them with your family.</p>
+
+<div class="row g-4">
+    @foreach (var pizza in Pizzas)
+    {
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">@pizza.Name</h5>
+                    <p class="card-text">@pizza.Description</p>
+                    <p class="fw-bold">@pizza.Price.ToString("C", CultureInfo.GetCultureInfo("en-US"))</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private List<PizzaItem> Pizzas = new()
+    {
+        new("Margherita", "Classic tomato, mozzarella, and basil.", 12.99m),
+        new("Pepperoni", "A bold pizza with pepperoni and melted cheese.", 14.49m),
+        new("Veggie Delight", "Loaded with fresh vegetables and herbs.", 13.49m)
+    };
+
+    private record PizzaItem(string Name, string Description, decimal Price);
+}

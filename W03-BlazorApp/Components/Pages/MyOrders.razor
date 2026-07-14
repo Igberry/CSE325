@@ -1,0 +1,28 @@
+@page "/myorders"
+@inject OrderState OrderState
+
+<PageTitle>My Orders</PageTitle>
+
+<h1>My Orders</h1>
+
+@if (!OrderState.Orders.Any())
+{
+    <p>You have not placed any orders yet.</p>
+}
+else
+{
+    <div class="list-group">
+        @foreach (var order in OrderState.Orders.OrderByDescending(o => o.CreatedAt))
+        {
+            <a class="list-group-item list-group-item-action" href="/myorders/@order.Id">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>Order #@order.Id</strong>
+                        <div>@order.CustomerName</div>
+                    </div>
+                    <span>$@order.Total.ToString("0.00")</span>
+                </div>
+            </a>
+        }
+    </div>
+}

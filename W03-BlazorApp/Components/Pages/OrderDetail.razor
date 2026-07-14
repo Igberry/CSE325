@@ -1,0 +1,29 @@
+@page "/myorders/{orderId:int}"
+@inject OrderState OrderState
+
+<PageTitle>Order Details</PageTitle>
+
+@if (Order is null)
+{
+    <h2>Order not found</h2>
+    <p>We could not find that order.</p>
+}
+else
+{
+    <h1>Order #@Order.Id</h1>
+    <p><strong>Customer:</strong> @Order.CustomerName</p>
+    <p><strong>Placed:</strong> @Order.CreatedAt.ToString("g")</p>
+    <ul>
+        @foreach (var item in Order.Items)
+        {
+            <li>@item.Quantity × @item.Pizza.Name — $@item.Pizza.BasePrice.ToString("0.00") each</li>
+        }
+    </ul>
+    <p><strong>Total:</strong> $@Order.Total.ToString("0.00")</p>
+}
+
+@code {
+    [Parameter] public int OrderId { get; set; }
+
+    private PlacedOrder? Order => OrderState.GetOrder(OrderId);
+}

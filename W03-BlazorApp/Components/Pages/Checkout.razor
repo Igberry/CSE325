@@ -1,0 +1,35 @@
+@page "/checkout"
+@page "/checkout/{orderId:int}"
+@inject OrderState OrderState
+
+<PageTitle>Checkout</PageTitle>
+
+<h1>Checkout</h1>
+
+@if (CurrentOrder is null)
+{
+    <p>No order is ready to check out yet.</p>
+}
+else
+{
+    <div class="card p-3 mb-3">
+        <h3>Order #@CurrentOrder.Id</h3>
+        <p><strong>Customer:</strong> @CurrentOrder.CustomerName</p>
+        <p><strong>Placed:</strong> @CurrentOrder.CreatedAt.ToString("g")</p>
+        <ul>
+            @foreach (var item in CurrentOrder.Items)
+            {
+                <li>@item.Quantity × @item.Pizza.Name — $@item.Pizza.BasePrice.ToString("0.00") each</li>
+            }
+        </ul>
+        <p><strong>Total:</strong> $@CurrentOrder.Total.ToString("0.00")</p>
+    </div>
+
+    <a class="btn btn-primary" href="/myorders/@CurrentOrder.Id">View order details</a>
+}
+
+@code {
+    [Parameter] public int? OrderId { get; set; }
+
+    private PlacedOrder? CurrentOrder => OrderId is null ? null : OrderState.GetOrder(OrderId.Value);
+}

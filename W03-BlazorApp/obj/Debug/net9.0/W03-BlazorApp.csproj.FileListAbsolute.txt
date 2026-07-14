@@ -21,7 +21,6 @@ C:\Users\david\Downloads\CSE325\W03-BlazorApp\obj\Debug\net9.0\scopedcss\Compone
 C:\Users\david\Downloads\CSE325\W03-BlazorApp\obj\Debug\net9.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 C:\Users\david\Downloads\CSE325\W03-BlazorApp\obj\Debug\net9.0\scopedcss\bundle\W03-BlazorApp.styles.css
 C:\Users\david\Downloads\CSE325\W03-BlazorApp\obj\Debug\net9.0\scopedcss\projectbundle\W03-BlazorApp.bundle.scp.css
-C:\Users\david\Downloads\CSE325\W03-BlazorApp\obj\Debug\net9.0\compressed\cgj21r9v78-khy4lop6wu.gz
 C:\Users\david\Downloads\CSE325\W03-BlazorApp\obj\Debug\net9.0\compressed\w5je1xi2hw-bqjiyaj88i.gz
 C:\Users\david\Downloads\CSE325\W03-BlazorApp\obj\Debug\net9.0\compressed\zzqr2ll8t5-c2jlpeoesf.gz
 C:\Users\david\Downloads\CSE325\W03-BlazorApp\obj\Debug\net9.0\compressed\rste6knv73-erw9l3u2r3.gz
@@ -77,3 +76,4 @@ C:\Users\david\Downloads\CSE325\W03-BlazorApp\obj\Debug\net9.0\refint\W03-Blazor
 C:\Users\david\Downloads\CSE325\W03-BlazorApp\obj\Debug\net9.0\W03-BlazorApp.pdb
 C:\Users\david\Downloads\CSE325\W03-BlazorApp\obj\Debug\net9.0\W03-BlazorApp.genruntimeconfig.cache
 C:\Users\david\Downloads\CSE325\W03-BlazorApp\obj\Debug\net9.0\ref\W03-BlazorApp.dll
+C:\Users\david\Downloads\CSE325\W03-BlazorApp\obj\Debug\net9.0\compressed\cgj21r9v78-h8sed5os9e.gz

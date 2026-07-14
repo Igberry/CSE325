@@ -1,0 +1,16 @@
+@using W03_BlazorApp.Models
+
+<div class="pizza-card">
+    <img src="@Pizza.ImageUrl" alt="@Pizza.Name" />
+    <h3>@Pizza.Name</h3>
+    <p>@Pizza.Description</p>
+    <div class="card-footer">
+        <span>$@Pizza.GetFormattedBasePrice()</span>
+        <button class="btn btn-primary" @onclick="() => OnOrder.InvokeAsync(Pizza)">Order</button>
+    </div>
+</div>
+
+@code {
+    [Parameter] public PizzaSpecial Pizza { get; set; } = new();
+    [Parameter] public EventCallback<PizzaSpecial> OnOrder { get; set; }
+}

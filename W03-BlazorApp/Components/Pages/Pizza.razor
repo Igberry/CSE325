@@ -1,5 +1,10 @@
 @page "/pizza"
-@using System.Globalization
+@using W03_BlazorApp.Models
+@using W03_BlazorApp.Services
+@using W03_BlazorApp.Components.Pages.Shared
+@inject PizzaService PizzaService
+@inject OrderState OrderState
+@inject NavigationManager NavigationManager
 
 <PageTitle>Pizza Specials</PageTitle>
 
@@ -10,24 +15,64 @@
     @foreach (var pizza in Pizzas)
     {
         <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">@pizza.Name</h5>
-                    <p class="card-text">@pizza.Description</p>
-                    <p class="fw-bold">@pizza.Price.ToString("C", CultureInfo.GetCultureInfo("en-US"))</p>
-                </div>
-            </div>
+            <PizzaCard Pizza="pizza" OnOrder="HandleOrder" />
         </div>
     }
 </div>
 
-@code {
-    private List<PizzaItem> Pizzas = new()
-    {
-        new("Margherita", "Classic tomato, mozzarella, and basil.", 12.99m),
-        new("Pepperoni", "A bold pizza with pepperoni and melted cheese.", 14.49m),
-        new("Veggie Delight", "Loaded with fresh vegetables and herbs.", 13.49m)
-    };
+@if (SelectedPizza is not null)
+{
+    <div class="order-dialog">
+        <h3>Order @SelectedPizza.Name</h3>
+        <p>@SelectedPizza.Description</p>
+        <label for="customerName">Your name</label>
+        <input id="customerName" class="form-control" @bind="CustomerName" />
+        <div class="mt-3 d-flex gap-2">
+            <button class="btn btn-success" @onclick="PlaceOrder">Confirm Order</button>
+            <button class="btn btn-outline-secondary" @onclick="CancelOrder">Cancel</button>
+        </div>
+        @if (!string.IsNullOrWhiteSpace(OrderMessage))
+        {
+            <p class="mt-3 text-success">@OrderMessage</p>
+        }
+    </div>
+}
 
-    private record PizzaItem(string Name, string Description, decimal Price);
+@code {
+    private List<PizzaSpecial> Pizzas = new();
+    private PizzaSpecial? SelectedPizza;
+    private string CustomerName = string.Empty;
+    private string OrderMessage = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        Pizzas = PizzaService.GetSpecials().ToList();
+    }
+
+    private void HandleOrder(PizzaSpecial pizza)
+    {
+        SelectedPizza = pizza;
+        CustomerName = string.Empty;
+        OrderMessage = string.Empty;
+    }
+
+    private void PlaceOrder()
+    {
+        if (SelectedPizza is null)
+        {
+            return;
+        }
+
+        OrderState.AddPizza(SelectedPizza);
+        var order = OrderState.PlaceOrder(CustomerName.Trim());
+        OrderMessage = $"Thanks {CustomerName.Trim() ?? "friend"}! Your {SelectedPizza.Name} is on the way.";
+        NavigationManager.NavigateTo($"/checkout/{order.Id}");
+    }
+
+    private void CancelOrder()
+    {
+        SelectedPizza = null;
+        CustomerName = string.Empty;
+        OrderMessage = string.Empty;
+    }
 }

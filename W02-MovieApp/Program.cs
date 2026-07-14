@@ -28,17 +28,7 @@ app.UseAuthorization();
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<MovieDbContext>();
-    context.Database.EnsureCreated();
-
-    if (!context.Movies.Any())
-    {
-        context.Movies.AddRange(
-            new Movie { Title = "The Matrix", Genre = "Science Fiction", ReleaseYear = 1999, Rating = 8.7m, Director = "The Wachowskis" },
-            new Movie { Title = "Back to the Future", Genre = "Adventure", ReleaseYear = 1985, Rating = 8.5m, Director = "Robert Zemeckis" },
-            new Movie { Title = "The Princess Bride", Genre = "Fantasy", ReleaseYear = 1987, Rating = 8.0m, Director = "Rob Reiner" }
-        );
-        context.SaveChanges();
-    }
+    SeedData.Initialize(context);
 }
 
 app.MapControllerRoute(

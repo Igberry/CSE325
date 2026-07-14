@@ -19,6 +19,31 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #f8f9fa;
+}
+
+main {
+  padding-top: 1.5rem;
+}
+
+.form-control,
+.form-select {
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.5rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(37, 140, 251, 0.2);
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+}
+
+.card {
+  box-shadow: 0 0.125rem 0.75rem rgba(0, 0, 0, 0.08);
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
